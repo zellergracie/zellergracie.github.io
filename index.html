@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --muted: #999999;
+      --border: #e8e8e8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 300;
+      font-size: 0.82rem;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── Nav ── */
+    nav {
+      padding: 3rem 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards 0.05s;
+    }
+
+    .nav-name { font-weight: 400; }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 5rem 0 4rem;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards 0.15s;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .hero p strong {
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .hero a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.15s;
+    }
+
+    .hero a:hover { border-color: var(--text); }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Section ── */
+    section {
+      padding: 3rem 0;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    section:nth-of-type(1) { animation-delay: 0.25s; }
+    section:nth-of-type(2) { animation-delay: 0.32s; }
+    section:nth-of-type(3) { animation-delay: 0.39s; }
+
+    .section-label {
+      color: var(--muted);
+      margin-bottom: 1.6rem;
+    }
+
+    /* ── Work ── */
+    .work-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 2rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .work-item:first-child { border-top: 1px solid var(--border); }
+    .work-item:hover .work-title { color: var(--muted); }
+
+    .work-title { transition: color 0.15s; }
+
+    .work-desc {
+      color: var(--muted);
+      grid-column: 1 / -1;
+      padding-bottom: 0.4rem;
+    }
+
+    .work-year {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* ── About ── */
+    .about-text { color: var(--muted); }
+    .about-text p + p { margin-top: 0.8rem; }
+    .about-text strong { color: var(--text); font-weight: 400; }
+
+    /* ── Contact ── */
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .contact-links a {
+      color: var(--muted);
+      text-decoration: none;
+      width: fit-content;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .contact-links a:hover {
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+    }
+
+    /* ── Animation ── */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 480px) {
+      nav { flex-direction: column; gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <nav>
+    <span class="nav-name">Your Name</span>
+    <ul class="nav-links">
+      <li><a href="#work">work</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <p><strong>Designer & developer</strong> based in City.</p>
+    <p>Focused on clarity, craft, and thoughtful digital experiences.</p>
+    <p>Currently open to new opportunities — <a href="mailto:you@email.com">say hello</a>.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section id="work">
+    <p class="section-label">selected work</p>
+
+    <a href="#" class="work-item">
+      <span class="work-title">Project One</span>
+      <span class="work-year">2024</span>
+      <span class="work-desc">Short description of the project and its impact.</span>
+    </a>
+
+    <a href="#" class="work-item">
+      <span class="work-title">Project Two</span>
+      <span class="work-year">2024</span>
+      <span class="work-desc">Short description of the project and its impact.</span>
+    </a>
+
+    <a href="#" class="work-item">
+      <span class="work-title">Project Three</span>
+      <span class="work-year">2023</span>
+      <span class="work-desc">Short description of the project and its impact.</span>
+    </a>
+
+    <a href="#" class="work-item">
+      <span class="work-title">Project Four</span>
+      <span class="work-year">2023</span>
+      <span class="work-desc">Short description of the project and its impact.</span>
+    </a>
+
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="about">
+    <p class="section-label">about</p>
+    <div class="about-text">
+      <p>I'm a [role] with [X] years of experience in [your focus area]. I care about [what matters to you].</p>
+      <p>Previously at <strong>Company A</strong> and <strong>Company B</strong>.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="contact">
+    <p class="section-label">contact</p>
+    <div class="contact-links">
+      <a href="mailto:you@email.com">you@email.com</a>
+      <a href="/cv.pdf" target="_blank">cv</a>
+      <a href="https://bsky.app/profile/yourusername.bsky.social" target="_blank">bluesky</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Your Name</footer>
+
+</div>
+</body>
+</html>
