@@ -101,6 +101,7 @@
     section:nth-of-type(1) { animation-delay: 0.25s; }
     section:nth-of-type(2) { animation-delay: 0.32s; }
     section:nth-of-type(3) { animation-delay: 0.39s; }
+    section:nth-of-type(4) { animation-delay: 0.46s; }
  
     .section-label {
       color: var(--muted);
@@ -123,15 +124,33 @@
     .work-title { transition: color 0.15s; }
  
     .work-desc {
+      display: block;
       color: var(--muted);
       grid-column: 1 / -1;
       padding-bottom: 0.4rem;
+    }
+ 
+    .work-desc a {
+      display: inline;
+      color: var(--text);
+      border-bottom: 1px solid #000;
+      text-decoration: none;
     }
  
     .work-year {
       color: var(--muted);
       white-space: nowrap;
     }
+ 
+    /* ── CV ── */
+    .cv-link {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.15s;
+    }
+ 
+    .cv-link:hover { border-color: var(--text); }
  
     /* ── Contact ── */
     .contact-links {
@@ -176,21 +195,20 @@
     <span class="nav-name">Gracie Zeller</span>
     <ul class="nav-links">
       <li><a href="#work">projects</a></li>
-      <li><a href="#about">about</a></li>
+      <li><a href="#cv">cv</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
   </nav>
  
   <div class="hero">
     <p><strong>Laboratory Manager</strong> at UW-Madison.</p>
-    <p>I'm interested in children's conceptual development and the origins of numerical cognition. I currently work as a laboratory manager in Steve Ferrigno's Cognitive Origins lab. In Fall 2026, I will be joining Ben Pitt's lab at UMass-Amherst as a PhD student. </p>
+    <p>I'm interested in children's conceptual development and the origins of numerical cognition. I currently work as a laboratory manager in Steve Ferrigno's Cognitive Origins lab. In Fall 2026, I will be joining Ben Pitt's lab at UMass-Amherst as a PhD student.</p>
   </div>
  
   <div class="divider"></div>
  
   <section id="work">
     <p class="section-label">projects</p>
- 
     <div class="work-item">
       <span class="work-title">One-to-one correspondence in children and macaques</span>
       <span class="work-year">2026</span>
@@ -199,12 +217,18 @@
   </section>
   
   <div class="divider"></div>
-
+ 
+  <section id="cv">
+    <p class="section-label">cv</p>
+    <p><a href="/cv.pdf" target="_blank" class="cv-link">download cv</a></p>
+  </section>
+ 
+  <div class="divider"></div>
+ 
   <section id="contact">
     <p class="section-label">contact</p>
     <div class="contact-links">
       <a href="mailto:gzeller2@wisc.edu">gzeller2@wisc.edu</a>
-      <a href="/cv.pdf" target="_blank">cv</a>
       <a href="https://bsky.app/profile/zellergracie.bsky.social" target="_blank">bluesky</a>
       <a href="https://www.linkedin.com/in/gracie-zeller" target="_blank">linkedin</a>
     </div>
