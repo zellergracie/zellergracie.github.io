@@ -24,10 +24,19 @@ title: Gracie Zeller
       <span class="work-title">{{ project.title }}</span>
       <span class="work-year">{{ project.year }}</span>
     </div>
-    <span class="work-abstract">{{ project.abstract }}</span>
+    <span class="work-abstract">
+      {{ project.description }}
+      {% if project.poster %}
+        You can find our <a href="{{ project.poster }}" target="_blank">{{ project.poster_label | default: "poster" }}</a> here.
+      {% endif %}
+      {% if project.paper %}
+        You can find the <a href="{{ project.paper }}" target="_blank">paper</a> here.
+      {% endif %}
+    </span>
   </div>
   {% endfor %}
 </section>
+
 
 <div class="divider"></div>
 
