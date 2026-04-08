@@ -10,7 +10,7 @@ title: Gracie Zeller
       <p>I'm interested in children's conceptual development and the origins of numerical cognition. I currently work as a laboratory manager in <a href="https://cognitiveoriginslab.psych.wisc.edu/">Steve Ferrigno's Cognitive Origins lab</a>. In Fall 2026, I will be joining <a href="https://cognitiveconstructionlab.com/">Ben Pitt's lab</a> at UMass-Amherst as a PhD student.</p>
     </div>
     <img src="/headshot.jpg" alt="Gracie Zeller"
-      style="width: 175px; height: 175px; object-fit: cover; border-radius: 6px; flex-shrink: 0; border: 1px solid #d9cfc0;">
+      style="width: 175px; height: 175px; object-fit: cover; border-radius: 12px; flex-shrink: 0; border: 1px solid #d9cfc0;">
   </div>
 </div>
 
