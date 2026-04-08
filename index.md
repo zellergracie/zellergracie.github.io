@@ -18,13 +18,15 @@ title: Gracie Zeller
 
 <section id="work">
   <p class="section-label">projects</p>
-  <div class="work-item" onclick="toggleAbstract(this)">
-    <span class="work-title">One-to-one correspondence in children and macaques</span>
-    <span class="work-year">2026</span>
-    <span class="work-abstract">
-      We found that cardinal principle knowledge is neither necessary nor sufficient to use one-to-one correspondence cues to make precise quantity discriminations. This challenges most existing accounts of how children learn the relationship between one-to-one correspondence and numerical equality. You can find our Cognitive Development Society poster <a href="/CDS_2026_poster.pdf" target="_blank" onclick="event.stopPropagation()">here</a>.
-    </span>
+  {% for project in site.data.projects %}
+  <div class="work-item">
+    <div class="work-header" onclick="toggleAbstract(this.closest('.work-item'))">
+      <span class="work-title">{{ project.title }}</span>
+      <span class="work-year">{{ project.year }}</span>
+    </div>
+    <span class="work-abstract">{{ project.abstract }}</span>
   </div>
+  {% endfor %}
 </section>
 
 <div class="divider"></div>
