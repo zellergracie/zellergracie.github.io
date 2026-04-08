@@ -22,7 +22,7 @@
     body.dark {
       --bg: #0f0f0f;
       --text: #e8e2d8;
-      --muted: #7a7068;
+      --muted: #a89e92;
       --border: #2a2520;
       --border-light: #1e1a17;
     }
@@ -74,14 +74,14 @@
     #theme-toggle {
       background: none;
       border: none;
-      font-family: Georgia, 'Times New Roman', serif;
       font-size: 1rem;
-      color: var(--muted);
       cursor: pointer;
       padding: 0;
-      border-bottom: 1px solid transparent;
-      transition: color 0.15s, border-color 0.15s;
+      line-height: 1;
+      transition: opacity 0.15s;
     }
+    
+    #theme-toggle:hover { opacity: 0.6; }
 
     #theme-toggle:hover {
       color: var(--text);
@@ -193,8 +193,7 @@
       <li><a href="#work">projects</a></li>
       <li><a href="#cv">cv</a></li>
       <li><a href="#contact">contact</a></li>
-      <li><button id="theme-toggle" onclick="toggleTheme()">dark</button></li>
-    </ul>
+      <li><button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">☾</button></li>    </ul>
   </nav>
 
   {{ content }}
@@ -205,13 +204,13 @@
 <script>
   function toggleTheme() {
     const isDark = document.body.classList.toggle('dark');
-    document.getElementById('theme-toggle').textContent = isDark ? 'light' : 'dark';
+    document.getElementById('theme-toggle').textContent = isDark ? '𖤓' : '☾';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }
 
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
-    document.getElementById('theme-toggle').textContent = 'light';
+    document.getElementById('theme-toggle').textContent = '𖤓';
   }
 </script>
 </body>
