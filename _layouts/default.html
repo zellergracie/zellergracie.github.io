@@ -131,21 +131,25 @@
       padding: 0.7rem 0;
       text-decoration: none;
       color: inherit;
+    }
+    
+    .work-item:first-child { border-top: 1px solid var(--border-light); }
+    
+    .work-header {
+      display: contents;
       cursor: pointer;
     }
-
-    .work-item:first-child { border-top: 1px solid var(--border-light); }
-
-    .work-item .work-title::after {
+    
+    .work-header .work-title::after {
       content: ' +';
       color: var(--muted);
       font-weight: 400;
     }
-
+    
     .work-item.open .work-title::after {
       content: ' −';
     }
-
+    
     .work-abstract {
       display: none;
       color: var(--muted);
@@ -155,15 +159,15 @@
       border-top: 1px solid var(--border-light);
       margin-top: 0.3rem;
     }
-
+    
     .work-abstract.open { display: block; }
-
+    
     .work-abstract a {
       color: var(--text);
       border-bottom: 1px solid var(--border);
       text-decoration: none;
     }
-
+    
     .work-desc {
       display: block;
       color: var(--muted);
@@ -171,13 +175,13 @@
       grid-column: 1 / -1;
       padding-bottom: 0.4rem;
     }
-
+    
     .work-desc a {
       color: var(--text);
       border-bottom: 1px solid var(--border);
       text-decoration: none;
     }
-
+    
     .work-year { color: var(--muted); white-space: nowrap; font-style: italic; }
 
     .cv-link {
