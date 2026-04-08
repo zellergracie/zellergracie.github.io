@@ -78,14 +78,13 @@
       cursor: pointer;
       padding: 0;
       line-height: 1;
-      transition: opacity 0.15s;
+      transition: opacity 0.15s, filter 0.15s;
     }
     
     #theme-toggle:hover { opacity: 0.6; }
-
-    #theme-toggle:hover {
-      color: var(--text);
-      border-color: var(--border);
+    
+    body.dark #theme-toggle {
+      filter: invert(1) brightness(0.8);
     }
 
     .hero {
