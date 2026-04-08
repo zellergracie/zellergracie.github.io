@@ -21,10 +21,10 @@
 
     body.dark {
       --bg: #0f0f0f;
-      --text: #e8e2d8;
+      --text: #f0ece4;
       --muted: #a89e92;
-      --border: #2a2520;
-      --border-light: #1e1a17;
+      --border: #3a3530;
+      --border-light: #2a2520;
     }
 
     html { scroll-behavior: smooth; }
@@ -80,11 +80,11 @@
       line-height: 1;
       transition: opacity 0.15s, filter 0.15s;
     }
-    
+
     #theme-toggle:hover { opacity: 0.6; }
-    
+
     body.dark #theme-toggle {
-      filter: invert(1) brightness(0.75);
+      filter: invert(1) brightness(0.8);
     }
 
     .hero {
@@ -131,9 +131,38 @@
       padding: 0.7rem 0;
       text-decoration: none;
       color: inherit;
+      cursor: pointer;
     }
 
     .work-item:first-child { border-top: 1px solid var(--border-light); }
+
+    .work-item .work-title::after {
+      content: ' +';
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .work-item.open .work-title::after {
+      content: ' −';
+    }
+
+    .work-abstract {
+      display: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      grid-column: 1 / -1;
+      padding: 0.4rem 0 0.4rem;
+      border-top: 1px solid var(--border-light);
+      margin-top: 0.3rem;
+    }
+
+    .work-abstract.open { display: block; }
+
+    .work-abstract a {
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+    }
 
     .work-desc {
       display: block;
@@ -192,7 +221,8 @@
       <li><a href="#work">projects</a></li>
       <li><a href="#cv">cv</a></li>
       <li><a href="#contact">contact</a></li>
-      <li><button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">☾</button></li>    </ul>
+      <li><button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">☾</button></li>
+    </ul>
   </nav>
 
   {{ content }}
@@ -201,6 +231,11 @@
 
 </div>
 <script>
+  function toggleAbstract(item) {
+    item.classList.toggle('open');
+    item.querySelector('.work-abstract').classList.toggle('open');
+  }
+
   function toggleTheme() {
     const isDark = document.body.classList.toggle('dark');
     document.getElementById('theme-toggle').textContent = isDark ? '𖤓' : '☾';
