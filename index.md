@@ -16,13 +16,16 @@ title: Gracie Zeller
 
 <div class="divider"></div>
 
-<div class="work-item" onclick="toggleAbstract(this)">
-  <span class="work-title">One-to-one correspondence in children and macaques</span>
-  <span class="work-year">2026</span>
-  <span class="work-abstract">
-    We found that cardinal principle knowledge is neither necessary nor sufficient to use one-to-one correspondence cues to make precise quantity discriminations. This challenges most existing accounts of how children learn the relationship between one-to-one correspondence and numerical equality. You can find our Cognitive Development Society poster <a href="/CDS_2026_poster.pdf" target="_blank" onclick="event.stopPropagation()">here</a>.
-  </span>
-</div>
+<section id="work">
+  <p class="section-label">projects</p>
+  <div class="work-item" onclick="toggleAbstract(this)">
+    <span class="work-title">One-to-one correspondence in children and macaques</span>
+    <span class="work-year">2026</span>
+    <span class="work-abstract">
+      We found that cardinal principle knowledge is neither necessary nor sufficient to use one-to-one correspondence cues to make precise quantity discriminations. This challenges most existing accounts of how children learn the relationship between one-to-one correspondence and numerical equality. You can find our Cognitive Development Society poster <a href="/CDS_2026_poster.pdf" target="_blank" onclick="event.stopPropagation()">here</a>.
+    </span>
+  </div>
+</section>
 
 <div class="divider"></div>
 
