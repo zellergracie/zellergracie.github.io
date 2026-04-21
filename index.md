@@ -7,7 +7,7 @@ title: Gracie Zeller
   <div class="hero-inner" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;">
     <div>
       <p><strong>Laboratory manager at UW-Madison.</strong></p>
-      <p>I’m interested in children’s conceptual development, particularly how they come to understand numerical concepts and principles. I currently work as a laboratory manager in the <a href="https://cognitiveoriginslab.psych.wisc.edu/">Cognitive Origins lab (Stephen Ferrigno)</a> at UW-Madison. In Fall 2026, I will be joining the <a href="https://cognitiveconstructionlab.com/">Cognitive Contruction lab (Ben Pitt)</a> at UMass-Amherst as a PhD student.</p>
+      <p>I’m interested in children’s conceptual development, particularly how they come to understand numerical concepts and principles. I currently work as a lab manager in the <a href="https://cognitiveoriginslab.psych.wisc.edu/">Cognitive Origins Lab (Stephen Ferrigno)</a> at UW-Madison. In Fall 2026, I will be joining the <a href="https://cognitiveconstructionlab.com/">Cognitive Contruction Lab (Ben Pitt)</a> at UMass-Amherst as a PhD student.</p>
     </div>
     <img src="/headshot.jpg" alt="Gracie Zeller"
       style="width: 175px; height: 175px; object-fit: cover; border-radius: 12px; flex-shrink: 0; border: 1px solid #d9cfc0;">
